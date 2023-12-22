@@ -1,0 +1,45 @@
+﻿@model List<FlightReservation.Models.Aircraft>
+
+<h1>Aircraft List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Capacity
+            </th>
+            <th>
+                Seat Layout
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var aircraft in Model)
+        {
+            <tr>
+                <td>
+                    @aircraft.Name
+                </td>
+                <td>
+                    @aircraft.Capacity
+                </td>
+                <td>
+                    @aircraft.SeatLayout
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@aircraft.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@aircraft.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@aircraft.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

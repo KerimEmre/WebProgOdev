@@ -1,0 +1,15 @@
+﻿@model FlightReservation.Models.Route
+
+<h1>Güzergah Düzenle</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label for="Name">Ad:</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <!-- Diğer güzergah alanları buraya eklenir -->
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+<a asp-action="Index">Geri Dön</a>

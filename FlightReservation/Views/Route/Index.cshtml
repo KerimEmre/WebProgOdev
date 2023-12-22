@@ -1,0 +1,28 @@
+﻿@model List<FlightReservation.Models.Route>
+
+<h1>Güzergahlar</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var route in Model)
+        {
+            <tr>
+                <td>@route.Id</td>
+                <td>@route.Name</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@route.Id">Detaylar</a> |
+                    <a asp-action="Edit" asp-route-id="@route.Id">Düzenle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create">Yeni Güzergah Ekle</a>

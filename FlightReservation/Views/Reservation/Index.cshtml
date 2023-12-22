@@ -1,0 +1,40 @@
+﻿@model List<FlightReservation.Models.Reservation>
+
+<h1>Reservation List</h1>
+
+<p>
+    <a asp-action="SelectSeat">Select Seat</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                FlightId
+            </th>
+            <th>
+                PassengerName
+            </th>
+            <th>
+                SelectedSeat
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model)
+        {
+            <tr>
+                <td>
+                    @reservation.FlightId
+                </td>
+                <td>
+                    @reservation.PassengerName
+                </td>
+                <td>
+                    @reservation.SelectedSeat
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

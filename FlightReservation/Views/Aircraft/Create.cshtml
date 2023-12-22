@@ -1,0 +1,28 @@
+﻿@model FlightReservation.Models.Aircraft
+
+<h1>Create Aircraft</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Aircraft Name:</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Capacity" class="control-label">Capacity:</label>
+        <input asp-for="Capacity" class="form-control" />
+        <span asp-validation-for="Capacity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SeatLayout" class="control-label">SeatLayout:</label>
+        <input asp-for="SeatLayout" class="form-control" />
+        <span asp-validation-for="SeatLayout" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

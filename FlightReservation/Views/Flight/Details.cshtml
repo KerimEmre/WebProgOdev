@@ -1,0 +1,31 @@
+﻿@model FlightReservation.Models.FlightModel
+
+<h1>Flight Details</h1>
+
+<div>
+    <h4>Flight</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Route Name
+        </dt>
+        <dd class="col-sm-10">
+            @Model.RouteName
+        </dd>
+        <dt class="col-sm-2">
+            Aircraft Name
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Aircraft
+        </dd>
+        <dt class="col-sm-2">
+            Departure Time
+        </dt>
+        <dd class="col-sm-10">
+            @Model.DepartureTime
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

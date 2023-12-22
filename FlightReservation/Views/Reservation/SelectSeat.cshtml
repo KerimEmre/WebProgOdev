@@ -1,0 +1,28 @@
+﻿@model FlightReservation.Models.Reservation
+
+<h1>Select Seat</h1>
+
+<form asp-action="SelectSeat">
+    <div class="form-group">
+        <label asp-for="FlightId" class="control-label">Flight ID:</label>
+        <input asp-for="FlightId" class="form-control" />
+        <span asp-validation-for="FlightId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PassengerName" class="control-label">Passenger Name:</label>
+        <input asp-for="PassengerName" class="form-control" />
+        <span asp-validation-for="PassengerName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SelectedSeat" class="control-label">Selected Seat:</label>
+        <input asp-for="SelectedSeat" class="form-control" />
+        <span asp-validation-for="SelectedSeat" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Select Seat" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to Reservation List</a>
+</div>

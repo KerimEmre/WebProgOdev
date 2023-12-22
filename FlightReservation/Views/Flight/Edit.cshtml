@@ -1,0 +1,30 @@
+﻿@model FlightReservation.Models.FlightModel
+
+<h1>Edit Flight</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="RouteId" class="control-label">Route ID:</label>
+        <input asp-for="RouteId" class="form-control" />
+        <span asp-validation-for="RouteId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AircraftId" class="control-label">Aircraft ID:</label>
+        <input asp-for="AircraftId" class="form-control" />
+        <span asp-validation-for="AircraftId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DepartureTime" class="control-label">Departure Time:</label>
+        <input asp-for="DepartureTime" class="form-control" />
+        <span asp-validation-for="DepartureTime" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
